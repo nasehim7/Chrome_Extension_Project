@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "Minor",
+  "description": "Entities Generator",
+  "version": "1",
+  "content_scripts": [
+    {
+      "js": ["injector.js","popup.js","app.js","pdf.js","bundle.js"],
+      "matches": ["*://*/*.pdf","*://*/*type=pdf"]
+    }
+  ],
+  
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "web_accessible_resources": ["exampleindex.html","index.html"],
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "https://ajax.googleapis.com/"]
+
+}

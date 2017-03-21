@@ -1,0 +1,11 @@
+<html>
+<script type='text/javascript'>
+  	chrome.runtime.onMessage.addListener(
+  	function(request, sender, sendResponse) {
+    alert(sender.tab.url);
+    if (request.greeting == "hello")
+      sendResponse({farewell: "goodbye"});
+  	});
+  };
+</script>
+</html>
